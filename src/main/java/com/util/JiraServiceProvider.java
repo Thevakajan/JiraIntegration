@@ -18,7 +18,15 @@ public class JiraServiceProvider {
 		this.project = project;
 	}
 
-	public void createJiraTicket(String issueType, String summary, String description, String reporterName) {
+	public void createJiraTicket(String issueType, String summary, String description, String reporterName) throws JiraException {
+		Issue.SearchResult sr = jira.searchIssues("summary ~ \""+summary+"\"");
+		if(sr.total!=0) {
+
+			System.out.println("Same Issue Already Exists on Jira");
+
+			return;
+
+		}
 
 		try {
 			FluentCreate fleuntCreate = jira.createIssue(project, issueType);
@@ -30,7 +38,11 @@ public class JiraServiceProvider {
 		} catch (JiraException e) {
 			e.printStackTrace();
 		}
-
+//		try {
+//			jiraOps.addAttachmentToJiraIssue(issueNumber, screenshotPath);
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
 	}
 
 }

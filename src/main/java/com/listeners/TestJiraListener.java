@@ -1,5 +1,6 @@
 package com.listeners;
 
+import net.rcarz.jiraclient.JiraException;
 import org.apache.commons.lang.exception.ExceptionUtils;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -37,7 +38,11 @@ public class TestJiraListener implements ITestListener {
 			String issueDescription = result.getThrowable().getMessage() + "\n";
 			issueDescription.concat(ExceptionUtils.getFullStackTrace(result.getThrowable()));
 
-			jiraSp.createJiraTicket("Bug", issueSummary, issueDescription, "Theva Kajan");
+			try {
+				jiraSp.createJiraTicket("Bug", issueSummary, issueDescription, "Theva Kajan");
+			} catch (JiraException e) {
+				e.printStackTrace();
+			}
 		}
 
 	}
