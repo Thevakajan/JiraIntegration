@@ -16,3 +16,9 @@ try {
             
             
             https://www.browserstack.com/guide/how-to-integrate-jira-with-selenium
+
+
+
+https://github.com/prakashnarkhede/Advanced_Selenium_Test_Automation_Framework.git  
+
+https://www.youtube.com/watch?v=lVa0b163Ejc
