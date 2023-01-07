@@ -26,7 +26,11 @@ https://www.youtube.com/watch?v=lVa0b163Ejc
 
 
 https://spades.atlassian.net/rest/api/3/priority
+
 https://spades.atlassian.net/rest/api/3/users
+
 https://spades.atlassian.net/rest/api/3/project/SPADE/components
+
 https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#api-rest-api-3-issue-createmeta-get
+
 https://github.com/prakashnarkhede/Advanced_Selenium_Test_Automation_Framework
